@@ -15,10 +15,10 @@ IsTagged(_Char, "AVATAR", 1)
 AND
 NOT DB_JLMBYpp_HasBuilt(_Char)
 THEN
+DB_JLMBYpp_HasBuilt(_Char);
 JLMBYpp_RemoveAllSkills(_Char);
 JLMBYpp_AvatarAddSkills(_Char);
 JLMBYpp_AddItems(_Char);
-DB_JLMBYpp_HasBuilt(_Char);
 
 // Check whether has points left and meets requirements
 QRY

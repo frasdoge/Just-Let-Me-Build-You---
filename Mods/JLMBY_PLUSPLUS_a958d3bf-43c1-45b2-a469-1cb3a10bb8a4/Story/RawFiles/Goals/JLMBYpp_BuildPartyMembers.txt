@@ -11,6 +11,7 @@ DB_IsPlayer(_Char)
 AND
 NOT DB_JLMBYpp_HasBuilt(_Char)
 THEN
+DB_JLMBYpp_HasBuilt(_Char);
 JLMBYpp_Rebuild(_Char);
 
 PROC
@@ -113,8 +114,10 @@ PROC
 ProcObjectTimerFinished((CHARACTERGUID)_Char, "JLMBYpp_AddSkillsTimer")
 AND
 GetVarInteger(_Char, "JLMBYpp_PointsSpent", 2)
+AND
+NOT DB_JLMBYpp_HasReceivedItems(_Char)
 THEN
-DB_JLMBYpp_HasBuilt(_Char);
+DB_JLMBYpp_HasReceivedItems(_Char);
 JLMBYpp_AddItems(_Char);
 
 PROC
@@ -122,9 +125,9 @@ ProcObjectTimerFinished((CHARACTERGUID)_Char, "JLMBYpp_AddSkillsTimer")
 AND
 CharacterGetAbilityPoints(_Char, 0)
 AND
-NOT DB_JLMBYpp_HasBuilt(_Char)
+NOT DB_JLMBYpp_HasReceivedItems(_Char)
 THEN
-DB_JLMBYpp_HasBuilt(_Char);
+DB_JLMBYpp_HasReceivedItems(_Char);
 JLMBYpp_AddItems(_Char);
 
 // Give player relevant items
