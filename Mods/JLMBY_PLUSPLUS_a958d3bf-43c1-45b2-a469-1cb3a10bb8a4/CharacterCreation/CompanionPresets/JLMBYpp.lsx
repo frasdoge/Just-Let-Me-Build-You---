@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" time="1387205254" />
+    <version major="1" minor="3" revision="0" build="0" />
+    <region id="CharacterCreationClass">
+        <node id="root">
+            <attribute id="ClassDescription" value="" handle="h5fe417dag2e25g42a2g8883gbaba66495adf" type="28" />
+			<attribute id="ClassLongDescription" value="" handle="ha467060dg09e6g4779gb9f7ge229451888ef" type="28" />
+            <attribute id="ClassName" value="JLMBYpp" handle="hd6a6cd3cge097g4e5fgbcbcg75a9a0f2bcdc" type="28" />
+            <attribute id="ClassType" value="JLMBYpp" type="22" />
+            <attribute id="SkillSet" value="" type="22" />
+            <attribute id="Voice" value="2" type="5" />
+			<attribute id="Icon" value="1" type="5" />
+			
+            <attribute id="NumStartingCombatAbilityPoints" value="2" type="4" />
+            <attribute id="NumStartingCivilAbilityPoints" value="1" type="4" />
+            <attribute id="NumStartingAttributePoints" value="3" type="4" />
+            <attribute id="NumStartingTalentPoints" value="1" type="4" />
+			<attribute id="Price" value="200" type="4" />
+			<attribute id="AreStatsWeighted" value="1" type="19" />
+            <children>
+                <node id="EquipmentProperties">
+                    <children>
+                        <node id="EquipmentProperty">
+                            <attribute id="RaceName" value="Human" type="22" />
+                            <attribute id="PreviewEquipmentSet" value="Class_Battlemage_Humans" type="22" />
+                            <attribute id="StartingEquipmentSet" value="Class_JLMBYpp" type="22" />
+                        </node>
+                        <node id="EquipmentProperty">
+                            <attribute id="RaceName" value="Dwarf" type="22" />
+                            <attribute id="PreviewEquipmentSet" value="Class_Battlemage_Dwarves" type="22" />
+                            <attribute id="StartingEquipmentSet" value="Class_JLMBYpp" type="22" />
+                        </node>
+                        <node id="EquipmentProperty">
+                            <attribute id="RaceName" value="Elf" type="22" />
+                            <attribute id="PreviewEquipmentSet" value="Class_Battlemage_Elves" type="22" />
+                            <attribute id="StartingEquipmentSet" value="Class_JLMBYpp" type="22" />
+                        </node>
+                        <node id="EquipmentProperty">
+                            <attribute id="RaceName" value="Lizard" type="22" />
+                            <attribute id="PreviewEquipmentSet" value="Class_Battlemage_Lizards" type="22" />
+                            <attribute id="StartingEquipmentSet" value="Class_JLMBYpp" type="22" />
+                        </node>
+                        <node id="EquipmentProperty">
+                            <attribute id="RaceName" value="Undead_Human" type="22" />
+                            <attribute id="PreviewEquipmentSet" value="Class_Battlemage_Humans" type="22" />
+                            <attribute id="StartingEquipmentSet" value="Class_JLMBYpp_Undead" type="22" />
+                        </node>
+                        <node id="EquipmentProperty">
+                            <attribute id="RaceName" value="Undead_Dwarf" type="22" />
+                            <attribute id="PreviewEquipmentSet" value="Class_Battlemage_Dwarves" type="22" />
+                            <attribute id="StartingEquipmentSet" value="Class_JLMBYpp_Undead" type="22" />
+                        </node>
+                        <node id="EquipmentProperty">
+                            <attribute id="RaceName" value="Undead_Elf" type="22" />
+                            <attribute id="PreviewEquipmentSet" value="Class_Battlemage_Elves" type="22" />
+                            <attribute id="StartingEquipmentSet" value="Class_JLMBYpp_Undead" type="22" />
+                        </node>
+                        <node id="EquipmentProperty">
+                            <attribute id="RaceName" value="Undead_Lizard" type="22" />
+                            <attribute id="PreviewEquipmentSet" value="Class_Battlemage_Lizards" type="22" />
+                            <attribute id="StartingEquipmentSet" value="Class_JLMBYpp_Undead" type="22" />
+                        </node>
+                    </children>
+                </node>
+                <node id="AbilityChanges">
+                    <children>
+
+                    </children>
+                </node>
+                <node id="AttributeChanges">
+                    <children>
+
+                    </children>
+                </node>
+                <node id="TalentsAdded">
+                    <children>
+                    
+                    </children>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

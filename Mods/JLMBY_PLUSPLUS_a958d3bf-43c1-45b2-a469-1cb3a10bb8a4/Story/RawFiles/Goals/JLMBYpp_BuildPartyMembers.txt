@@ -1,0 +1,143 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+
+IF
+CharacterJoinedParty((CHARACTERGUID)_Char)
+AND
+DB_IsPlayer(_Char)
+AND
+NOT DB_JLMBYpp_HasBuilt(_Char)
+THEN
+JLMBYpp_Rebuild(_Char);
+
+PROC
+JLMBYpp_Rebuild((CHARACTERGUID)_Char)
+THEN
+JLMBYpp_RefundTalents(_Char); // Compatibility with mods like Auspicious Beginnings that overwrite classes
+
+PROC
+JLMBYpp_Rebuild((CHARACTERGUID)_Char)
+AND
+CharacterAddToCharacterCreation(_Char, 1, 1)
+THEN
+DB_NOOP();
+
+PROC
+JLMBYpp_Rebuild((CHARACTERGUID)_Char)
+THEN
+JLMBYpp_RemoveAllSkills(_Char);
+JLMBYpp_AddSkills(_Char);
+
+//
+PROC
+JLMBYpp_RefundTalents((CHARACTERGUID)_Char)
+AND
+DB_JLMBYpp_AllTalents(_Talent)
+AND
+NOT DB_JLMBYpp_InnateTalents(_Talent)
+AND
+CharacterHasTalent(_Char, _Talent, 1)
+THEN
+CharacterRemoveTalent(_Char, _Talent);
+CharacterAddTalentPoint(_Char, 1);
+
+// Remove skills
+PROC
+JLMBYpp_RemoveAllSkills((CHARACTERGUID)_Char)
+AND
+DB_JLMBYpp_SkillsToRemove((STRING)_Skill)
+THEN
+CharacterRemoveSkill(_Char, _Skill);
+
+// Begin timer
+PROC
+JLMBYpp_AddSkills((CHARACTERGUID)_Char)
+AND
+CharacterGetAbilityPoints(_Char, _NumAbilityPoints)
+AND
+_NumAbilityPoints > 0
+THEN
+SetVarInteger(_Char, "JLMBYpp_PointsSpent", 0);
+ProcObjectTimer(_Char, "JLMBYpp_AddSkillsTimer", 200);
+
+// Check whether has points left and meets requirements
+QRY
+JLMBYpp_HasPointsAndReqs((CHARACTERGUID)_Char, (STRING)_Ability)
+AND
+GetVarInteger(_Char, "JLMBYpp_PointsSpent", _PointsSpent)
+AND
+_PointsSpent < 2
+AND
+CharacterGetAbility(_Char, _Ability, _AbilityLevel)
+AND
+_AbilityLevel > 0
+AND
+NOT DB_JLMBYpp_HasReceived(_Char, _Ability)
+AND
+IntegerSum(_PointsSpent, 1, _CurrentPointsSpent)
+THEN
+DB_JLMBYpp_HasReceived(_Char, _Ability);
+SetVarInteger(_Char, "JLMBYpp_PointsSpent", _CurrentPointsSpent);
+
+// Skills
+PROC
+ProcObjectTimerFinished((CHARACTERGUID)_Char, "JLMBYpp_AddSkillsTimer")
+AND
+DB_JLMBYpp_Abilities(_Ability)
+AND
+JLMBYpp_HasPointsAndReqs(_Char, _Ability)
+AND
+DB_JLMBYpp_StarterSkills(_Ability, (STRING)_Skill)
+THEN
+CharacterAddSkill(_Char, _Skill, 1);
+
+// Loop timer if more abilities left to spend
+PROC
+ProcObjectTimerFinished((CHARACTERGUID)_Char, "JLMBYpp_AddSkillsTimer")
+AND
+GetVarInteger(_Char, "JLMBYpp_PointsSpent", _PointsSpent)
+AND
+_PointsSpent < 2
+AND
+CharacterGetAbilityPoints(_Char, _NumAbilities)
+AND
+_NumAbilities != 0
+THEN
+ProcObjectTimer(_Char, "JLMBYpp_AddSkillsTimer", 200);
+
+// If finished
+PROC
+ProcObjectTimerFinished((CHARACTERGUID)_Char, "JLMBYpp_AddSkillsTimer")
+AND
+GetVarInteger(_Char, "JLMBYpp_PointsSpent", 2)
+THEN
+DB_JLMBYpp_HasBuilt(_Char);
+JLMBYpp_AddItems(_Char);
+
+PROC
+ProcObjectTimerFinished((CHARACTERGUID)_Char, "JLMBYpp_AddSkillsTimer")
+AND
+CharacterGetAbilityPoints(_Char, 0)
+AND
+NOT DB_JLMBYpp_HasBuilt(_Char)
+THEN
+DB_JLMBYpp_HasBuilt(_Char);
+JLMBYpp_AddItems(_Char);
+
+// Give player relevant items
+PROC
+JLMBYpp_AddItems((CHARACTERGUID)_Char)
+AND
+DB_JLMBYpp_HasReceived(_Char, _Ability)
+AND
+DB_JLMBYpp_HasReceivedToItem(_Ability, _Item)
+THEN
+CharacterGiveReward(_Char, _Item, 1);
+
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "__Start"

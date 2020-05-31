@@ -1,0 +1,30 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+
+// Compatibility for mods adding innate talents
+
+IF
+GameStarted(_Region, _)
+AND
+SysStatus("LaughingLeader_InnateTalents", _Status)
+THEN
+DB_JLMBYpp_InnateTalents("AnimalEmpathy");
+DB_JLMBYpp_InnateTalents("ViolentMagic");
+DB_JLMBYpp_InnateTalents("QuickStep");
+
+IF
+GameStarted(_Region, _)
+AND
+SysStatus("KCE_Talents_Story", _Status)
+THEN
+DB_JLMBYpp_InnateTalents("AttackOfOpportunity");
+DB_JLMBYpp_InnateTalents("ViolentMagic");
+DB_JLMBYpp_InnateTalents("QuickStep");
+
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "__Start"

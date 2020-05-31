@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" />
+    <version major="3" minor="6" revision="6" build="0" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="a958d3bf-43c1-45b2-a469-1cb3a10bb8a4" type="23" />
+            <attribute id="Name" value="JLMBY_PLUSPLUS" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="70c24b32-ff6c-47c5-9961-ef4b8323ca6f" type="23" />
+        </node>
+    </region>
+</save>

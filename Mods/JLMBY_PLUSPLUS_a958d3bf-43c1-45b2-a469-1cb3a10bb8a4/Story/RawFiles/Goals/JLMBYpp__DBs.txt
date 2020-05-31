@@ -1,0 +1,224 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+// All talents in the base game
+DB_JLMBYpp_AllTalents("Ambidextrous"); // Ambidextrous
+DB_JLMBYpp_AllTalents("RangerLoreArrowRecover"); // Arrow Recovery
+DB_JLMBYpp_AllTalents("ResistDead"); // Comeback Kid
+DB_JLMBYpp_AllTalents("ElementalAffinity"); // Elemental Affinity
+DB_JLMBYpp_AllTalents("ElementalRanger"); // Elemental Ranger
+DB_JLMBYpp_AllTalents("Escapist"); // Escapist
+DB_JLMBYpp_AllTalents("Executioner"); // Executioner
+DB_JLMBYpp_AllTalents("FaroutDude"); // Far Out Man
+DB_JLMBYpp_AllTalents("FiveStarRestaurant"); // Five-Star Diner
+DB_JLMBYpp_AllTalents("Raistlin"); // Glass Cannon
+DB_JLMBYpp_AllTalents("SurpriseAttack"); // Guerilla
+DB_JLMBYpp_AllTalents("Perfectionist"); // Hothead
+DB_JLMBYpp_AllTalents("IceKing"); // Ice King
+DB_JLMBYpp_AllTalents("Leech"); // Leech
+DB_JLMBYpp_AllTalents("LivingArmor"); // Living Armour
+DB_JLMBYpp_AllTalents("LoneWolf"); // Lone Wolf
+DB_JLMBYpp_AllTalents("Memory"); // Mnemonic
+DB_JLMBYpp_AllTalents("ResurrectToFullHealth"); // Morning Person
+DB_JLMBYpp_AllTalents("AttackOfOpportunity"); // Opportunist
+DB_JLMBYpp_AllTalents("DualWieldingDodging"); // Parry Master
+DB_JLMBYpp_AllTalents("AnimalEmpathy"); // Pet Pal
+DB_JLMBYpp_AllTalents("WarriorLoreNaturalHealth"); // Picture of Health
+DB_JLMBYpp_AllTalents("ViolentMagic"); // Savage Sortilege
+DB_JLMBYpp_AllTalents("WarriorLoreGrenadeRange"); // Slingshost
+DB_JLMBYpp_AllTalents("Stench"); // Stench
+DB_JLMBYpp_AllTalents("QuickStep"); // The Pawn
+DB_JLMBYpp_AllTalents("Torturer"); // Torturer
+DB_JLMBYpp_AllTalents("Unstable"); // Unstable
+DB_JLMBYpp_AllTalents("WalkItOff"); // Walk It Off
+DB_JLMBYpp_AllTalents("WhatARush"); // What A Rush
+DB_JLMBYpp_AllTalents("ExtraSkillPoints"); // All Skilled Up
+DB_JLMBYpp_AllTalents("ExtraStatPoints"); // Bigger And Better
+DB_JLMBYpp_AllTalents("Demon"); // Demon
+DB_JLMBYpp_AllTalents("NoAttackOfOpportunity"); // Duck Duck Goose
+
+// All skills that players may start with that should be removed
+
+// Warfare
+DB_JLMBYpp_SkillsToRemove("Rush_BatteringRam");
+DB_JLMBYpp_SkillsToRemove("Cone_GroundSmash");
+DB_JLMBYpp_SkillsToRemove("Projectile_BouncingShield");
+DB_JLMBYpp_SkillsToRemove("Target_CripplingBlow");
+
+// Scoundrel
+DB_JLMBYpp_SkillsToRemove("MultiStrike_Vault");
+DB_JLMBYpp_SkillsToRemove("Projectile_ThrowingKnife");
+DB_JLMBYpp_SkillsToRemove("Shout_Adrenaline");
+DB_JLMBYpp_SkillsToRemove("Projectile_Chloroform");
+
+// Huntsman
+DB_JLMBYpp_SkillsToRemove("Projectile_PinDown");
+DB_JLMBYpp_SkillsToRemove("Target_ElementalArrowheads");
+DB_JLMBYpp_SkillsToRemove("Target_FirstAid");
+DB_JLMBYpp_SkillsToRemove("Projectile_Ricochet");
+
+// Summoning
+DB_JLMBYpp_SkillsToRemove("Summon_Incarnate");
+DB_JLMBYpp_SkillsToRemove("Target_RangedInfusion");
+DB_JLMBYpp_SkillsToRemove("Summon_TotemFromSurface");
+DB_JLMBYpp_SkillsToRemove("Projectile_DimensionalBolt");
+
+// Polymorph
+DB_JLMBYpp_SkillsToRemove("Target_TentacleLash");
+DB_JLMBYpp_SkillsToRemove("Target_ChickenTouch");
+DB_JLMBYpp_SkillsToRemove("Shout_BullHorns");
+DB_JLMBYpp_SkillsToRemove("Shout_ChameleonSkin");
+
+// Pyrokinetic
+DB_JLMBYpp_SkillsToRemove("Target_BurnMyEyes");
+DB_JLMBYpp_SkillsToRemove("Projectile_FlamingDaggers");
+DB_JLMBYpp_SkillsToRemove("Shout_Ignition");
+DB_JLMBYpp_SkillsToRemove("Target_Haste");
+
+// Geomancy
+DB_JLMBYpp_SkillsToRemove("Target_Fortify");
+DB_JLMBYpp_SkillsToRemove("Projectile_PyroclasticRock");
+DB_JLMBYpp_SkillsToRemove("Shout_Contamination");
+DB_JLMBYpp_SkillsToRemove("Projectile_PoisonDartStart");
+
+// Hydrosophist
+DB_JLMBYpp_SkillsToRemove("ProjectileStrike_HailStrike");
+DB_JLMBYpp_SkillsToRemove("Rain_Water");
+DB_JLMBYpp_SkillsToRemove("Target_Restoration");
+DB_JLMBYpp_SkillsToRemove("Target_FrostyShell");
+
+// Aerothurge
+DB_JLMBYpp_SkillsToRemove("Shout_BlindingRadiance");
+DB_JLMBYpp_SkillsToRemove("Target_ShockingTouch");
+DB_JLMBYpp_SkillsToRemove("Projectile_LightningBolt");
+DB_JLMBYpp_SkillsToRemove("Shout_FavourableWind");
+
+// Necromancy
+DB_JLMBYpp_SkillsToRemove("Target_MosquitoSwarm");
+DB_JLMBYpp_SkillsToRemove("Target_DecayingTouch");
+DB_JLMBYpp_SkillsToRemove("Target_BloodBubble");
+DB_JLMBYpp_SkillsToRemove("Target_BloatedCorpse");
+
+// Starter skills
+
+// Starter skills from Warfare
+DB_JLMBYpp_StarterSkills("WarriorLore", "Target_CripplingBlow");
+DB_JLMBYpp_StarterSkills("WarriorLore", "Rush_BatteringRam");
+DB_JLMBYpp_StarterSkills("WarriorLore", "Projectile_BouncingShield");
+DB_JLMBYpp_StarterSkills("WarriorLore", "Cone_GroundSmash");
+
+// Starter skills from Scoundrel
+DB_JLMBYpp_StarterSkills("RogueLore", "Projectile_ThrowingKnife");
+DB_JLMBYpp_StarterSkills("RogueLore", "Shout_Adrenaline");
+DB_JLMBYpp_StarterSkills("RogueLore", "MultiStrike_Vault");
+DB_JLMBYpp_StarterSkills("RogueLore", "Projectile_Chloroform");
+
+// Starter skills from Huntsman
+DB_JLMBYpp_StarterSkills("RangerLore", "Projectile_Ricochet");
+DB_JLMBYpp_StarterSkills("RangerLore", "Projectile_PinDown");
+DB_JLMBYpp_StarterSkills("RangerLore", "Target_FirstAid");
+DB_JLMBYpp_StarterSkills("RangerLore", "Target_ElementalArrowheads");
+
+// Starter skills from Summoning
+DB_JLMBYpp_StarterSkills("Summoning", "Summon_Incarnate");
+DB_JLMBYpp_StarterSkills("Summoning", "Summon_TotemFromSurface");
+DB_JLMBYpp_StarterSkills("Summoning", "Projectile_DimensionalBolt");
+DB_JLMBYpp_StarterSkills("Summoning", "Target_RangedInfusion");
+
+// Starter skills from Polymorph
+DB_JLMBYpp_StarterSkills("Polymorph", "Shout_ChameleonSkin");
+DB_JLMBYpp_StarterSkills("Polymorph", "Shout_BullHorns");
+DB_JLMBYpp_StarterSkills("Polymorph", "Target_ChickenTouch");
+DB_JLMBYpp_StarterSkills("Polymorph", "Target_TentacleLash");
+
+// Starter skills from Pyrokinetic
+DB_JLMBYpp_StarterSkills("FireSpecialist", "Projectile_FlamingDaggers");
+DB_JLMBYpp_StarterSkills("FireSpecialist", "Target_BurnMyEyes");
+DB_JLMBYpp_StarterSkills("FireSpecialist", "Target_Haste");
+DB_JLMBYpp_StarterSkills("FireSpecialist", "Shout_Ignition");
+
+// Starter skills from Geomancy
+DB_JLMBYpp_StarterSkills("EarthSpecialist", "Projectile_PyroclasticRock");
+DB_JLMBYpp_StarterSkills("EarthSpecialist", "Target_Fortify");
+DB_JLMBYpp_StarterSkills("EarthSpecialist", "Projectile_PoisonDartStart");
+DB_JLMBYpp_StarterSkills("EarthSpecialist", "Shout_Contamination");
+
+// Starter skills from Hydrosophist
+DB_JLMBYpp_StarterSkills("WaterSpecialist", "Rain_Water");
+DB_JLMBYpp_StarterSkills("WaterSpecialist", "Target_Restoration");
+DB_JLMBYpp_StarterSkills("WaterSpecialist", "Target_FrostyShell");
+DB_JLMBYpp_StarterSkills("WaterSpecialist", "ProjectileStrike_HailStrike");
+
+// Starter skills from Aerothurge
+DB_JLMBYpp_StarterSkills("AirSpecialist", "Shout_BlindingRadiance");
+DB_JLMBYpp_StarterSkills("AirSpecialist", "Target_ShockingTouch");
+DB_JLMBYpp_StarterSkills("AirSpecialist", "Projectile_LightningBolt");
+DB_JLMBYpp_StarterSkills("AirSpecialist", "Shout_FavourableWind");
+
+// Starter skills from Necromancy
+DB_JLMBYpp_StarterSkills("Necromancy", "Target_BloatedCorpse");
+DB_JLMBYpp_StarterSkills("Necromancy", "Target_MosquitoSwarm");
+DB_JLMBYpp_StarterSkills("Necromancy", "Target_BloodBubble");
+DB_JLMBYpp_StarterSkills("Necromancy", "Target_DecayingTouch");
+
+// Starter items
+// Wands and daggers are added in pairs, as unlikely many people will end up getting script extender for my other solution
+// More hard-cody but still very easy for other modders to change should they need compatibility, as it uses its own loot table
+
+// Starter items for Pyrokinetic
+DB_JLMBYpp_HasReceivedToItem("FireSpecialist", "JLMBYpp_Pyro");
+
+// Starter items for Geomancy
+DB_JLMBYpp_HasReceivedToItem("EarthSpecialist", "JLMBYpp_Geo");
+
+// Starter items for Aerothurge
+DB_JLMBYpp_HasReceivedToItem("AirSpecialist", "JLMBYpp_Aero");
+
+// Starter items for Hydrosophist
+DB_JLMBYpp_HasReceivedToItem("WaterSpecialist", "JLMBYpp_Hydro");
+
+// Starter items for Necromancy
+DB_JLMBYpp_HasReceivedToItem("Necromancy", "JLMBYpp_Necro");
+
+// Starter items for Summoning
+DB_JLMBYpp_HasReceivedToItem("Summoning", "JLMBYpp_Summoning");
+
+// Starter items for Warfare
+DB_JLMBYpp_HasReceivedToItem("WarriorLore", "JLMBYpp_Warrior");
+
+// Starter items for Polymorph
+DB_JLMBYpp_HasReceivedToItem("Polymorph", "JLMBYpp_Polymorph");
+
+// Starter items for Huntsman
+DB_JLMBYpp_HasReceivedToItem("RangerLore", "JLMBYpp_Huntsman");
+
+// Starter items for Scoundrel
+DB_JLMBYpp_HasReceivedToItem("RogueLore", "JLMBYpp_Scoundrel");
+
+// Categories to check
+
+DB_JLMBYpp_Abilities("WarriorLore");
+DB_JLMBYpp_Abilities("RogueLore");
+DB_JLMBYpp_Abilities("RangerLore");
+DB_JLMBYpp_Abilities("Summoning");
+DB_JLMBYpp_Abilities("Polymorph");
+DB_JLMBYpp_Abilities("FireSpecialist");
+DB_JLMBYpp_Abilities("EarthSpecialist");
+DB_JLMBYpp_Abilities("WaterSpecialist");
+DB_JLMBYpp_Abilities("AirSpecialist");
+DB_JLMBYpp_Abilities("Necromancy");
+
+KBSECTION
+
+IF
+GameStarted(_Region, _)
+AND
+IsGameLevel(_Region, 1)
+THEN
+GoalCompleted;
+
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "__Start"

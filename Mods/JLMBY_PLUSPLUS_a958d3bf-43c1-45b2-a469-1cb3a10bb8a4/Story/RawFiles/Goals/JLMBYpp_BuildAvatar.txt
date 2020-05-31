@@ -1,0 +1,50 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+
+IF
+GameStarted(_Region, _)
+AND
+IsGameLevel(_Region, 1)
+AND
+DB_IsPlayer(_Char)
+AND
+IsTagged(_Char, "AVATAR", 1)
+AND
+NOT DB_JLMBYpp_HasBuilt(_Char)
+THEN
+JLMBYpp_RemoveAllSkills(_Char);
+JLMBYpp_AvatarAddSkills(_Char);
+JLMBYpp_AddItems(_Char);
+DB_JLMBYpp_HasBuilt(_Char);
+
+// Check whether has points left and meets requirements
+QRY
+JLMBYpp_HasReqs((CHARACTERGUID)_Char, (STRING)_Ability)
+AND
+CharacterGetAbility(_Char, _Ability, _AbilityLevel)
+AND
+_AbilityLevel > 0
+AND
+NOT DB_JLMBYpp_HasReceived(_Char, _Ability)
+THEN
+DB_JLMBYpp_HasReceived(_Char, _Ability);
+
+// 
+PROC
+JLMBYpp_AvatarAddSkills((CHARACTERGUID)_Char)
+AND
+DB_JLMBYpp_Abilities(_Ability)
+AND
+JLMBYpp_HasReqs(_Char, _Ability)
+AND
+DB_JLMBYpp_StarterSkills(_Ability, (STRING)_Skill)
+THEN
+CharacterAddSkill(_Char, _Skill, 0);
+
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "__Start"
